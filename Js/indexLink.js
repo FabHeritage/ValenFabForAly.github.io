@@ -36,4 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
     )
+
+    yesBtn.addEventListener("click", () => {
+    window.location.href =
+        "mailto:Jijibo225@hotmail.com?subject=She Said Yes :)&body=YES!!!";
+});
+
 }) 
