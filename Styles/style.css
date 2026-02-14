@@ -1,0 +1,134 @@
+:root {
+    --back_color: #FFF5F7;
+    --text_color: #1B1F3B;
+    --header_color: #C2185B;
+    --accent_color: #FF4D8D;
+    --glass_color: rgba(255, 255, 255, 0.55);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #FFF5F7, #FFE3EC);
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    padding: 2rem 0;
+    background-color:var(--header_color);
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--accent_color);
+    font-weight: 600;
+    letter-spacing: -1px;
+    text-shadow:  2px 2px #FFF5F7;
+}
+
+h2, h3, p {
+    font-size: 1.6rem;
+    color: var(--text_color);
+    margin-top: 1rem;
+    text-shadow:  2px 2px #FFF5F7;
+
+}
+
+div, section {
+    width: 75%;
+    max-width: 700px;
+    padding: 2rem;
+    margin: 2rem auto;
+
+    background: var(--glass_color);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-radius: 20px;
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08),
+        inset 0 1px 1px rgba(255, 255, 255, 0.6);
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    color: var(--accent_color);
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+button {
+    margin: 3rem;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    border: none;
+    border-radius: 50px;
+
+    background: linear-gradient(135deg, #FF4D8D, #FF7DAF);
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(255, 77, 141, 0.4);
+
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 12px 30px rgba(255, 77, 141, 0.6);
+}
+
+.btnList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media (max-width: 500px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    a {
+        font-size: 2rem;
+    }
+
+    .btnList {
+        flex-direction: column;
+    }
+
+    button {
+        margin: 1.5rem;
+    }
+}
